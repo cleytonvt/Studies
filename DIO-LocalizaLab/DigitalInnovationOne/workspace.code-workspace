@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\C"
+		},
+		{
+			"name": "PHP",
+			"path": "..\\..\\..\\PHP"
+		},
+		{
+			"name": "Projeto-C",
+			"path": "..\\..\\..\\Projeto-C"
+		},
+		{
+			"name": "Projetos",
+			"path": "..\\.."
+		},
+		{
+			"name": "Java",
+			"path": "..\\..\\..\\Java"
+		}
+	],
+	"settings": {
+		"totvsLanguageServer.welcomePage": false
+	}
+}

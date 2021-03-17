@@ -1,0 +1,16 @@
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.exe
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.deps.json
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.runtimeconfig.json
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.runtimeconfig.dev.json
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.dll
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\ref\DigitalInnovationOne.dll
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\bin\Debug\net5.0\DigitalInnovationOne.pdb
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.csprojAssemblyReference.cache
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.AssemblyInfoInputs.cache
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.AssemblyInfo.cs
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.csproj.CoreCompileInputs.cache
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.dll
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\ref\DigitalInnovationOne.dll
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.pdb
+C:\Users\Cleyton\Documents\Projetos\DIO-LocalizaLab\DigitalInnovationOne\obj\Debug\net5.0\DigitalInnovationOne.genruntimeconfig.cache
