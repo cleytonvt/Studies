@@ -8,120 +8,95 @@ import javax.swing.JTextField;
 
 public class Principal implements ActionListener{
 
-JButton ponto;
-JButton div;
-JButton mult;
-JButton subt;
-JButton adic;
-JButton igual;
-JButton[] numeros = new JButton[10];
-JTextField visor;
-static JFrame frame;
-int memo = 0;
-int read = 0;
-char op; 
-   
+//declaração de variáveis utilizadas no fonte
+private static JFrame frame;
+private JTextField visor;
+private JButton[] botoes = new JButton[16];
+private String[] op = {"", ".", "=", "+", "/", "*", "-"}; 
+private int[] posX = {5,75,145,215}; 
+private int[] posY = {5,55,125,195,265};   
+private int larg = 65;
+private int alt = 65;
+private int memo = 0;
+private int read = 0;
+private int i, j = 0, k= 0, l = 0, m = 0, n = 1, o = 4;
+
+
 public static void main(String[] args) {
-	// TODO Auto-generated method stub
-	Principal app = new Principal();
-	app.go();
-	frame.setVisible(true); //setar se o frame será visivel ou não
+	
+	Principal app = new Principal();						// instanciando o objeto app
+	app.go();												//chama metodo go, no objeto app
+	frame.setVisible(true); 								//setar se o frame será visivel ou não
 }
 	
 private void go() {
-	// TODO Auto-generated method stub
-	frame = new JFrame();
-	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //finalizar aplicacao ao fechar programa
-	frame.setSize(300,375); //setar tamanho do fram (largura,altura)
-	frame.getContentPane().setLayout(null); //layout do conteudo do frame
-	frame.setResizable(false); //setar se o frame sera expansivel ou nao
-	frame.setTitle("Calculadora"); //titulo do programa
-		
-	/*primeira linha do frame*/		
-	visor = new JTextField();
-	visor.setEnabled(false);
-    	//posicionamento (distancia da esquerda,distancia do topo, largura, altura)
-	visor.setBounds(5, 5, 275, 45); 
-    	frame.add(visor);
 	
-	/*segunda linha do frame*/
-	numeros[7] = new JButton("7");
-	numeros[7].setBounds(5, 55, 65, 65);
-	frame.add(numeros[7]);
-        
-	numeros[8] = new JButton("8");
-	numeros[8].setBounds(75, 55, 65, 65);
-	frame.add(numeros[8]);
-        
-	numeros[9] = new JButton("9");
-	numeros[9].setBounds(145, 55, 65, 65);
-	frame.add(numeros[9]);
-        
-	div = new JButton("/");
-	div.setBounds(215, 55, 65, 65);
-	frame.add(div);
+	frame = new JFrame();									//Instanciando o JFrame
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 	//finalizar aplicacao ao fechar programa
+	frame.setSize(300,375); 								//setar tamanho do fram (largura,altura)
+	frame.getContentPane().setLayout(null); 				//layout do conteudo do frame
+	frame.setResizable(false); 								//setar se o frame sera expansivel ou nao
+	frame.setTitle("Calculadora"); 							//titulo do programa
 		
-	/*terceira linha do frame*/
-	numeros[4] = new JButton("4");
-	numeros[4].setBounds(5, 125, 65, 65);
-	frame.add(numeros[4]);
-	      
-	numeros[5] = new JButton("5");
-	numeros[5].setBounds(75, 125, 65, 65);
-	frame.add(numeros[5]);
-	        
-	numeros[6] = new JButton("6");
-	numeros[6].setBounds(145, 125, 65, 65);
-	frame.add(numeros[6]);
-	    
-	mult = new JButton("*");
-	mult.setBounds(215, 125, 65, 65);
-	frame.add(mult);
+		
+	visor = new JTextField();								//instanciando JTextField 
+	visor.setEnabled(false);								//desabilita a alteracao do campo texto
+    visor.setBounds(posX[0], posY[0], larg+210, alt-20); 	//posicionamento (distancia da esquerda,distancia do topo, largura, altura)
+    frame.add(visor);
+	
 
-	/*quarta linha do frame*/    	
-	numeros[1] = new JButton("1");
-	numeros[1].setName("1");
-	numeros[1].setBounds(5, 195, 65, 65);
-	frame.add(numeros[1]);
-        
-	numeros[2] = new JButton("2");
-	numeros[2].setBounds(75, 195, 65, 65);
-	frame.add(numeros[2]);
-        
-	numeros[3] = new JButton("3");
-	numeros[3].setBounds(145, 195, 65, 65);
-	frame.add(numeros[3]);
-       
-	subt = new JButton("-");
-	subt.setBounds(215, 195, 65, 65);
-	frame.add(subt);
-		
-	/*quinta linha do frame*/
-	numeros[0] = new JButton("0");
-	numeros[0].setBounds(5, 265, 65, 65);
-	frame.add(numeros[0]);
-		
-	adic = new JButton("+");
-	adic.setBounds(75, 265, 65, 65);
-	frame.add(adic);
-		
-	igual = new JButton("=");
-	igual.setBounds(145, 265, 65, 65);
-	frame.add(igual);
-		
-	ponto = new JButton(".");
-	ponto.setBounds(215, 265, 65, 65);
-	frame.add(ponto);
+	/*
+	Trecho do código que cria, posiciona e acidiona os botões no frame,
+	utilizado laço de repetição para os números e os botões de operação
+	*/
+	
+		for ( i = 0; i <= 16; i++ )
+		{	
+			if (i >= 1 && i <= 3){
+				botoes[i] = new JButton(String.valueOf(i));
+				botoes[i].setBounds(posX[j], posY[3], larg, alt);
+				frame.add(botoes[i]);
+				j++;
+			} 
 			
-	
-	numeros[0].addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			read +=0;
-			visor.setText(visor.getText()+"0");
+			else if (i >= 4 && i <= 6){
+				botoes[i] = new JButton(String.valueOf(i));
+				botoes[i].setBounds(posX[k], posY[2], larg, alt);
+				frame.add(botoes[i]);
+				k++;
+			} 
+			
+			else if (i >= 7 && i <= 9){
+				botoes[i] = new JButton(String.valueOf(i));
+				botoes[i].setBounds(posX[l], posY[1], larg, alt);
+				frame.add(botoes[i]);
+				l++;
 			}
-		});
-		
-	}
 
+			else if (i == 0){
+				
+				botoes[i] = new JButton(String.valueOf(i));
+				botoes[i].setBounds(posX[m], posY[4], larg, alt);
+				frame.add(botoes[i]);
+			}
+
+			else if (i >= 10 && i <=12){
+				m++;
+				botoes[i] = new JButton(op[m]);
+				botoes[i].setBounds(posX[m], posY[4], larg, alt);
+				frame.add(botoes[i]);
+			}
+
+			else if (i >= 13 && i < 16){
+				botoes[i] = new JButton(op[o]);
+				botoes[i].setBounds(posX[3], posY[n], larg, alt);
+				frame.add(botoes[i]);
+				n++;
+				o++;
+			}
+		}
+
+	
+	
+	}
 }
