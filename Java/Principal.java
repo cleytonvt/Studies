@@ -92,22 +92,10 @@ private void go() {
 				o++;
 			}
 		}
-		
-		for(w = 1; w < 10 ; w++){
-			
-				botoes[w].addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						/*read *= 10;*/
-						read = w;
-						visor.setText(visor.getText() + String.valueOf(w));
-					}
-				});
-		}
 	}
 
 @Override
-public void actionPerformed(ActionEvent e) {
-	// TODO Auto-generated method stub
-	
-}
+	public void actionPerformed(ActionEvent e){
+		
+	}
 }
