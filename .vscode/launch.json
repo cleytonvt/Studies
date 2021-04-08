@@ -3,6 +3,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch TelaLogin",
+			"request": "launch",
+			"mainClass": "TelaLogin",
+			"projectName": "Studies_cb2a36fe"
+		},
+		{
+			"type": "java",
 			"name": "Launch Principal",
 			"request": "launch",
 			"mainClass": "Principal",
