@@ -3,6 +3,20 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch TeladeLogin",
+			"request": "launch",
+			"mainClass": "TeladeLogin.src.TeladeLogin",
+			"projectName": "Studies_c3f2c714"
+		},
+		{
+			"type": "java",
+			"name": "Launch TelaLogin",
+			"request": "launch",
+			"mainClass": "TelaLogin",
+			"projectName": "Studies_c3f2c714"
+		},
+		{
+			"type": "java",
 			"name": "Launch TelaLogin",
 			"request": "launch",
 			"mainClass": "TelaLogin",
@@ -18,6 +32,7 @@
 		{
 			"type": "totvs_language_debug",
 			"request": "launch",
+			"vmArgs": "--module-path /Users/Cleyton/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml", 
 			"name": "TOTVS Language Debug",
 			"program": "${command:AskForProgramName}",
 			"cwb": "${workspaceFolder}",
