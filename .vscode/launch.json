@@ -2,6 +2,13 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"type": "java",
+			"name": "Launch Principal",
+			"request": "launch",
+			"mainClass": "Principal",
+			"projectName": "Studies_cb2a36fe"
+		},
+		{
 			"type": "totvs_language_debug",
 			"request": "launch",
 			"name": "TOTVS Language Debug",

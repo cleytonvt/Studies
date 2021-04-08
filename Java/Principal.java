@@ -97,7 +97,6 @@ private void go() {
 			
 				botoes[w].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						/*read *= 10;*/
 						read = w;
 						visor.setText(visor.getText() + String.valueOf(w));
 					}
@@ -108,6 +107,6 @@ private void go() {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	
+	visor.setText(visor.getText() + "10");
 }
 }
