@@ -92,6 +92,7 @@ private void go() {
 				o++;
 			}
 		}
+<<<<<<< HEAD
 		
 		for(w = 1; w < 10 ; w++){
 			
@@ -109,4 +110,12 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	visor.setText(visor.getText() + "10");
 }
+=======
+	}
+
+@Override
+	public void actionPerformed(ActionEvent e){
+		
+	}
+>>>>>>> 25eaf2e1d5a329f22daa004b781ed8ad520ebe3e
 }
