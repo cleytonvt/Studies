@@ -11,13 +11,14 @@ public class Principal implements ActionListener{
 private static JFrame frame;
 private JTextField visor;
 private JButton[] botoes = new JButton[16];
-private String[] op = {"", ".", "=", "+", "/", "*", "-"}; 
+private String[] op = {".", "+", "/", "*", "-", "="}; 
+private String opr;
 private int[] posX = {5,75,145,215}; 
 private int[] posY = {5,55,125,195,265};   
 private int larg = 65;
 private int alt = 65;
-private int i, j = 0, k= 0, l = 0, m = 0, n = 1, o = 4, w = 0;
-int read = 0;
+private int i, j = 0, k= 0, l = 0, m = 0, n = 1, o = 2, h =1;
+int read = 0, memo = 0;
 
 public static void main(String[] args) {
 	
@@ -42,14 +43,20 @@ private void go() {
 	frame.add(visor);
 	
 
-	/*
-	Trecho do código que cria, posiciona e acidiona os botões no frame,
-	utilizado laço de repetição para os números e os botões de operação
-	*/
+	
+	//Trecho do código que cria, posiciona e acidiona os botões no frame,
+	//utilizado laço de repetição para os números e os botões de operação
+	
 	
 		for ( i = 0; i < 16; i++ )
 		{	
-			if (i >= 1 && i <= 3){
+			if (i == 0){
+				botoes[i] = new JButton(String.valueOf(i));
+				botoes[i].setBounds(posX[0], posY[4], larg, alt);
+				frame.add(botoes[i]);
+			}
+			
+			else if (i >= 1 && i <= 3){
 				botoes[i] = new JButton(String.valueOf(i));
 				botoes[i].setBounds(posX[j], posY[3], larg, alt);
 				frame.add(botoes[i]);
@@ -70,21 +77,15 @@ private void go() {
 				l++;
 			}
 
-			else if (i == 0){
-				
-				botoes[i] = new JButton(String.valueOf(i));
-				botoes[i].setBounds(posX[m], posY[4], larg, alt);
-				frame.add(botoes[i]);
-			}
-
-			else if (i >= 10 && i <=12){
-				m++;
+			else if (i >= 10 && i <=11){
 				botoes[i] = new JButton(op[m]);
-				botoes[i].setBounds(posX[m], posY[4], larg, alt);
+				botoes[i].setBounds(posX[h], posY[4], larg, alt);
 				frame.add(botoes[i]);
+				m++;
+				h++;
 			}
 
-			else if (i >= 13 && i < 16){
+			else if (i >= 12 && i < 16){
 				botoes[i] = new JButton(op[o]);
 				botoes[i].setBounds(posX[3], posY[n], larg, alt);
 				frame.add(botoes[i]);
@@ -92,30 +93,162 @@ private void go() {
 				o++;
 			}
 		}
-<<<<<<< HEAD
 		
-		for(w = 1; w < 10 ; w++){
-			
-				botoes[w].addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						read = w;
-						visor.setText(visor.getText() + String.valueOf(w));
-					}
-				});
-		}
+			botoes[0].addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent evt) {
+					read += 0;
+					visor.setText(visor.getText() + "0");
+				}
+			});
+		
+			botoes[1].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 1;
+	                visor.setText(visor.getText() + "1");
+	            }
+	        });
+
+	        botoes[2].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 2;
+	                visor.setText(visor.getText() + "2");
+	            }
+	        });
+	        
+	        botoes[3].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 3;
+	                visor.setText(visor.getText() + "3");
+	            }
+	        });
+	        
+	        botoes[4].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 4;
+	                visor.setText(visor.getText() + "4");
+	            }
+	        });
+	        
+	        botoes[5].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 5;
+	                visor.setText(visor.getText() + "5");
+	            }
+	        });
+	        
+	        botoes[6].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 6;
+	                visor.setText(visor.getText() + "6");
+	            }
+	        });
+	        
+	        botoes[7].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 7;
+	                visor.setText(visor.getText() + "7");
+	            }
+	        });
+	        
+	        botoes[8].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 8;
+	                visor.setText(visor.getText() + "8");
+	            }
+	        });
+	        
+	        botoes[9].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                read += 9;
+	                visor.setText(visor.getText() + "9");
+	            }
+	        });
+	        
+	        /*nao consegui colocar este botao para funcionar, quando utilizo ele soma*/
+	       /* botoes[10].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                opr = op[0];
+	                memo += read;
+	                read = 0;
+	                visor.setText(memo + " . ");
+	            }
+	        });*/
+	        
+	        botoes[11].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                opr = op[1];
+	                memo += read;
+	                read = 0;
+	                visor.setText(memo + " + ");
+	            }
+	        });
+	        
+	        botoes[12].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                opr = op[2];
+	                memo += read;
+	                read = 0;
+	                visor.setText(memo + " / ");
+	            }
+	        });
+	        
+	        botoes[13].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                opr = op[3];
+	                memo += read;
+	                read = 0;
+	                visor.setText(memo + " * ");
+	            }
+	        });
+	        
+	        botoes[14].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                opr = op[4];
+	                memo += read;
+	                read = 0;
+	                visor.setText(memo + " - ");
+	            }
+	        });
+	       
+
+	        botoes[15].addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent evt) {
+	                switch (opr) {
+	                    case ".": {
+	                        memo += '.';
+	                        break;
+	                    }
+	                    case "+": {
+	                        memo += read;
+	                        break;
+	                    }
+	                    
+	                    case "-": {
+	                        memo -= read;
+	                        break;
+	                    }
+	                    
+	                    case "/": {
+	                        memo *= read;
+	                        break;
+	                    }
+	                    
+	                    case "*": {
+	                        memo /= read;
+	                        break;
+	                    }
+	                    
+	                }
+	                read = 0;
+	                visor.setText("" + memo);
+	            }
+	        });
+		
 	}
 
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	visor.setText(visor.getText() + "10");
+	
 }
-=======
-	}
-
-@Override
-	public void actionPerformed(ActionEvent e){
-		
-	}
->>>>>>> 25eaf2e1d5a329f22daa004b781ed8ad520ebe3e
 }
