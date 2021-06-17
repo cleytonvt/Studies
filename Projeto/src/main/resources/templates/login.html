@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-Br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
+    <h1>Pagina de login</h1>
+    
+    <div th:if="${param.error}">
+    	Usuário ou senha inválido!
+    </div>
+    
+    <div th:if="${param.logout}">
+    	Você foi desconectado!    
+    </div>
+    
+    <form th:action="@{/login}" method="POST">
+    
+    <div>
+    	<label> Usuário: <input type="text" name="usuario"></label>
+    </div>
+    
+    <div>
+    	<label> Senha: <input type="password" name="senha"></label>
+    </div>
+    
+    <div>
+    	<input type="submit" name="Entrar">
+    </div>
+    
+    </form>
+</body>
+</html>
