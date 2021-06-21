@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1">
+			fx:controller="com.TecnicasDeProgramacao.Projeto.Controller.ChartController"
+</VBox>
+
+<LineChart prefHeight= "600" fx:id="chart">
+	<xAxis>
+		<CategoryAxis label="Time"/>
+	</xAxis>
+
+	<xAxis>
+		<NumberAxis label="Price"/>
+	</xAxis>
+	
+</LineChart>
