@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.4280936454849498" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.TecnicasDeProgramacao.Projeto2.Controllers.LoginController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button layoutX="93.0" layoutY="264.0" mnemonicParsing="false" onAction="#btCadastrar" text="Cadastrar" />
+            <Label layoutX="31.0" layoutY="119.0" prefHeight="120.0" prefWidth="192.0" text="Caso este seja seu primeiro login,utilize o botão abaixo para realizar o seu cadastro!" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button layoutX="220.0" layoutY="265.0" mnemonicParsing="false" text="Entrar" />
+            <Hyperlink layoutX="46.0" layoutY="266.0" text="Esqueci a senha" />
+            <TextField layoutX="50.0" layoutY="199.0" prefHeight="25.0" prefWidth="218.0" promptText="Digite sua senha" />
+            <TextField layoutX="50.0" layoutY="144.0" prefHeight="25.0" prefWidth="218.0" promptText="Digite seu usuario" />
+            <Label layoutX="106.0" layoutY="67.0" prefHeight="23.0" prefWidth="106.0" text="Bem Vindo" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
