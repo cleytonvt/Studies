@@ -43,17 +43,9 @@ public class RegisterController {
 	
 	@FXML
     public void btInsert(ActionEvent e) {
-		salvar();
 		StageInitializer.changeScreen("login");
 	}
 	
-	public void salvar() {
-		user.setNome(lbNome.getText());
-		user.setUsuario(lbUsuario.getText());
-		user.setEmail(lbEmail.getText());
-		user.setSenha(lbSenha.getText());
-				
-	}
-	
+
 	
 }
