@@ -1,0 +1,23 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(MainApp());
+}
+
+class MainApp extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+                title: Text("Primeiro Projeto")
+            ),
+          body: Center(
+            child: Text("Aprendendo Flutter"),
+          ),
+        )
+    );
+  }
+}
